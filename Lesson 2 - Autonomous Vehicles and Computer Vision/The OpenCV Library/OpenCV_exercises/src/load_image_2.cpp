@@ -8,9 +8,8 @@
 
 void loadImage2() {
     for (int i = 5; i <= 9; i++) {
-
         // create file name
-        std::ostringstream imgNumber;  // #include <sstream>
+        std::ostringstream imgNumber;                         // #include <sstream>
         imgNumber << std::setfill('0') << std::setw(4) << i;  // #include <iomanip>
         std::string filename = "../images/img" + imgNumber.str() + ".png";
 
