@@ -7,6 +7,15 @@ set(CMAKE_CXX_FLAGS, "${CXX_FLAGS}")
 
 project(camera_fusion)
 
+# Let's say, OpenCV is installed inside a non-standard directory, e.g. /usr/local/my_opencv
+# and this 'my_opencv' directory contains the bin, include, lib, and share directories.
+# In that case, to build this project, either uncomment the line below and run: cmake ..; make
+# 
+# set(OpenCV_DIR "<opencv non-standard path>/lib/cmake/opencv4")
+# 
+# or run: cmake -DCMAKE_PREFIX_PATH="<opencv non-standard path>" ..; make
+# e.g. cmake -DCMAKE_PREFIX_PATH="/usr/local/my_opencv" ..; make
+
 find_package(OpenCV 4.1 REQUIRED)
 
 include_directories(${OpenCV_INCLUDE_DIRS})
